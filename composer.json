@@ -1,7 +1,7 @@
 {
     "name": "evista/crawl-cache-warmup",
     "type": "library",
-    "description": "Crawls a list of links asyncronosly",
+    "description": "Crawls a list of links asyncronously",
     "keywords": [
         "evista",
         "crawl-cache-warmup",
