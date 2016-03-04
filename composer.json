@@ -1,0 +1,47 @@
+{
+    "name": "evista/crawl-cache-warmup",
+    "type": "library",
+    "description": "Crawls a list of links asyncronosly",
+    "keywords": [
+        "evista",
+        "crawl-cache-warmup",
+        "crawl",
+        "cache warmup",
+    ],
+    "homepage": "https://github.com/evista/crawl-cache-warmup",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Balint Sera",
+            "email": "sera.balint@e-vista.hu",
+            "homepage": "evista-agency.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "~5.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "4.*",
+        "scrutinizer/ocular": "~1.1",
+        "squizlabs/php_codesniffer": "~2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Evista\\CrawlCacheWarmup\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Evista\\CrawlCacheWarmup\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
