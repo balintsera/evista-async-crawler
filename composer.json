@@ -6,7 +6,7 @@
         "evista",
         "crawl-cache-warmup",
         "crawl",
-        "cache warmup",
+        "cache warmup"
     ],
     "homepage": "https://github.com/evista/crawl-cache-warmup",
     "license": "MIT",
@@ -14,12 +14,14 @@
         {
             "name": "Balint Sera",
             "email": "sera.balint@e-vista.hu",
-            "homepage": "evista-agency.com",
+            "homepage": "http://evista-agency.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php" : "~5.5"
+        "php" : "~5.5",
+        "curl/curl": "^1.3",
+        "symfony/dependency-injection": "^3.0"
     },
     "require-dev": {
         "phpunit/phpunit" : "4.*",
