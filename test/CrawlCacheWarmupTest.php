@@ -31,7 +31,7 @@ class CrawlCacheWarmupTest extends \PHPUnit_Framework_TestCase
 
     public function testVisitAll()
     {
-        $links = ['http://127.0.0.1:8181', 'http://127.0.0.1:8181/test'];
+        $links = ['http://127.0.0.1:8181', 'http://127.0.0.1:8181/test', 'http://index.hu'];
 
         $linkVisitor = new LinkVisitor();
         $linkVisitor->visitAll($links);
