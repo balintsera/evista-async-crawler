@@ -27,13 +27,18 @@ class CrawlCacheWarmupTest extends \PHPUnit_Framework_TestCase
         //$result = $linkVisitor->visit('http://127.0.0.1:8181');
         $result = null;
         $this->assertEquals(null, $result);
+
+        $result = $linkVisitor->visit('http://google.hu');
+        $this->assertEquals(null, $result);
+        $this->assertGreaterThan(1, strlen($linkVisitor->getLastResponse()));
     }
 
     public function testVisitAll()
     {
-        $links = ['http://127.0.0.1:8181', 'http://127.0.0.1:8181/test', 'http://index.hu'];
+        $links = ['http://google.com', 'http://google.hu'];
 
         $linkVisitor = new LinkVisitor();
         $linkVisitor->visitAll($links);
+        $this->assertGreaterThan(1, strlen($linkVisitor->getLastResponse()));
     }
 }
