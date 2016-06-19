@@ -3,11 +3,10 @@
  * Created by PhpStorm.
  * User: balint
  * Date: 2016. 03. 04.
- * Time: 9:02
+ * Time: 9:02.
  */
 
 namespace Evista\CrawlCacheWarmup;
-
 
 class XmlLinkCollector
 {
@@ -22,6 +21,5 @@ class XmlLinkCollector
 
     public function collectURLs()
     {
-
     }
 }

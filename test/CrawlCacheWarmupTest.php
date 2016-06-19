@@ -1,6 +1,6 @@
 <?php
 
-namespace Evista\CrawlCacheWarmup\Test;
+namespace Evista\CrawlCacheWarmup\test;
 
 use Evista\CrawlCacheWarmup\ServiceContainer;
 use Evista\CrawlCacheWarmup\LinkVisitor;

@@ -3,16 +3,15 @@
  * Created by PhpStorm.
  * User: balint
  * Date: 2016. 03. 04.
- * Time: 8:04
+ * Time: 8:04.
  */
 
 namespace Evista\CrawlCacheWarmup;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\DependencyInjection\Reference;
 
 /**
- * Dependency injection service container
+ * Dependency injection service container.
  *
  * @author Balint Sera <balint.sera@gmail.com>
  */
@@ -21,7 +20,7 @@ class ServiceContainer
     private $services = [];
 
     /**
-     * Constructor 
+     * Constructor.
      */
     public function __construct()
     {
@@ -30,8 +29,10 @@ class ServiceContainer
     }
 
     /**
-     * Get Service
+     * Get Service.
+     *
      * @param string $serviceName name of the service
+     *
      * @return object service  
      */
     public function get($serviceName)
@@ -42,7 +43,7 @@ class ServiceContainer
     /**
      * Register services
      * Register your services here, see Symfony Depency Injection component
-     * from more info
+     * from more info.
      */
     private function register()
     {
