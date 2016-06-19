@@ -24,13 +24,28 @@ class CrawlCacheWarmupTest extends \PHPUnit_Framework_TestCase
     public function testCrawlLink()
     {
         $linkVisitor = new LinkVisitor();
-        //$result = $linkVisitor->visit('http://127.0.0.1:8181');
         $result = null;
         $this->assertEquals(null, $result);
 
         $result = $linkVisitor->visit('http://google.hu');
-        $this->assertEquals(null, $result);
         $this->assertGreaterThan(1, strlen($linkVisitor->getLastResponse()));
+    }
+
+    public function testFailedCrawler()
+    {
+        $linkVisitor = new LinkVisitor();
+
+        try {
+            $result = $linkVisitor->visit('wronggggurl46');
+            $this->fail('Expected exception not thrown');
+        } catch (\Evista\CrawlCacheWarmup\Exception\CrawlerException $e) {
+            $this->assertEquals(
+                'Error when trying to get content. Crawler error: Could not resolve host: wronggggurl46',
+                $e->getMessage()
+            );
+        } catch (\Exception $e) {
+            $this->fail('Unexpected exception thrown');
+        }
     }
 
     public function testVisitAll()

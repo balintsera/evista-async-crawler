@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "df69224a81f21914c0fd184da4333089",
-    "content-hash": "b5334f080c6286f8bc1388f87e59c0b2",
+    "hash": "0d918121b8575cd0b3ce7305a53c80ca",
+    "content-hash": "c78c7989f5ade0ad22d0143e4eededd2",
     "packages": [
         {
             "name": "curl/curl",
@@ -1078,6 +1078,52 @@
                 "schema"
             ],
             "time": "2016-01-25 15:43:01"
+        },
+        {
+            "name": "kujira/phpunit-printer",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/adm-husker/kujira-phpunit-printer.git",
+                "reference": "ffe513b48c2938cc9fd9d1117430dc2a4710b93b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/adm-husker/kujira-phpunit-printer/zipball/ffe513b48c2938cc9fd9d1117430dc2a4710b93b",
+                "reference": "ffe513b48c2938cc9fd9d1117430dc2a4710b93b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "phpunit-printer": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cyril Barragan",
+                    "email": "cyril.barragan@gmail.com",
+                    "homepage": "http://www.cyril-barragan.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A PhpUnit result printer",
+            "homepage": "https://github.com/cyrilbarragan/kujira-phpunit-printer",
+            "keywords": [
+                "phpunit",
+                "printer",
+                "result",
+                "test",
+                "unit"
+            ],
+            "time": "2014-07-05 15:29:47"
         },
         {
             "name": "monolog/monolog",

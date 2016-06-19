@@ -29,7 +29,8 @@
         "phpunit/phpunit" : "4.*",
         "scrutinizer/ocular": "~1.1",
         "squizlabs/php_codesniffer": "~2.3",
-        "phpro/grumphp": "^0.9.1"
+        "phpro/grumphp": "^0.9.1",
+        "kujira/phpunit-printer": "1.0.1"
     },
     "autoload": {
         "psr-4": {
