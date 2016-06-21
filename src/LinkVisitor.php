@@ -16,16 +16,18 @@ class LinkVisitor
     private $timeout = 50;
     private $services = false;
     private $lastResult = false;
+    private $crawler = false;
 
     public function __construct()
     {
         $this->services = new ServiceContainer();
+        $this->crawler = $this->services->get('crawler');
     }
 
     public function visit($url)
     {
         // Get crawler service
-        $crawler = $this->services->get('crawler');
+        $crawler = $this->crawler;
 
         // Get url
         $crawler->get($url);
@@ -59,7 +61,11 @@ class LinkVisitor
             $paralellCallbacks,
             function (array $results) {
                 foreach ($results as $result) {
-                    $this->visit($result);
+                    try {
+                      $this->visit($result);
+                    } catch (CrawlerException $e) {
+
+                    }
                 }
             },
             function (\Exception $e) {
@@ -73,5 +79,10 @@ class LinkVisitor
     public function getLastResponse()
     {
         return $this->lastResponse;
+    }
+
+    public function getCrawler()
+    {
+      return $this->crawler;
     }
 }
